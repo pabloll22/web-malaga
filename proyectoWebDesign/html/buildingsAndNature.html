@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Málaga Website</title>
+    <link rel="stylesheet" href="./../css/style.css" />
+  </head>
+
+  <body>
+    <header class="sub-header">
+      <nav>
+        <ul class="menu">
+          <li><a href="./../index.html"> HOME</a></li>
+          <li class="menuTypes">
+            NEWS & EVENTS
+            <ul class="sub-menu">
+              <li><a href="news.html">News</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            HISTORY
+            <ul class="sub-menu">
+              <li><a href="CityHistory.html">City History</a></li>
+              <li><a href="FamousPeople.html">Famous People</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            SIGHTSEEING
+            <ul class="sub-menu">
+              <li><a href="buildingsAndNature.html">Buildings and Nature</a></li>
+              <li><a href="attractions.html">Attractions</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            SERVICES
+            <ul class="sub-menu">
+              <li><a href="acommodation.html">Accommodation</a></li>
+              <li><a href="restaurants.html">Restaurants</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section>
+      <h1 class="introTitle">Buildings and Nature</h1>
+      <p class="introText">
+        Explore the perfect blend of Málaga's timeless architecture and breathtaking nature, where every corner tells a story of history and harmony with the natural world.
+      </p>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="container-gallery2">
+          <h1>Buildings</h1>
+          <button class="arrow left" onclick="scrollGallery(-1, 'gallery1')">&#8592;</button>
+          <div class="photos" id="gallery1">
+            <div class="card">
+                <img src="./../img/faro.jpg" alt="LightHouse" />
+                <h3>Light House</h3>
+              </div>
+              <div class="card">
+                <img src="./../img/catedral.jpeg" alt="catedral" />
+                <h3>Cathedral</h3>
+              </div>
+            <div class="card">
+              <img src="./../img/boncoespaña.jpg" alt="SpainBank" />
+              <h3>Spain Bank</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/plazaDelsiglo.jpg" alt="Plaza del siglo" />
+              <h3>Plaza del siglo</h3>
+            </div>
+            
+          </div>
+          <button class="arrow right" onclick="scrollGallery(1, 'gallery1')">&#8594;</button>
+        </div>
+
+        <div class="container-gallery2">
+          <h1>Nature</h1>
+          <button class="arrow left" onclick="scrollGallery(-1, 'gallery2')">&#8592;</button>
+          <div class="photos" id="gallery2">
+            <div class="card">
+                <img src="./../img/JardinConcepcion.jpg" alt="ConcepcionGarden" />
+                <h3>Concepcion Garden</h3>
+              </div>
+              <div class="card">
+                  <img src="./../img/playaMaro.webp" alt="Maro beach" />
+                  <h3>Maro Beach</h3>
+                </div>
+              <div class="card">
+                <img src="./../img/monte.jpg" alt="Mount" />
+                <h3>Mounts of Malaga</h3>
+              </div>
+              <div class="card">
+                <img src="./../img/parqueMalaga.jpg" alt="MalagaPark" />
+                <h3>Malaga's Park</h3>
+              </div>
+          </div>
+          <button class="arrow right" onclick="scrollGallery(1, 'gallery2')">&#8594;</button>
+        </div>
+
+        
+        
+      </div>
+    </section>
+
+    <script>
+      function scrollGallery(direction, galleryId) {
+        const photos = document.getElementById(galleryId);
+        const cardWidth = photos.querySelector('.card').clientWidth;
+        photos.scrollBy({
+          left: direction * cardWidth,
+          behavior: 'smooth'
+        });
+      }
+    </script>
+
+<footer class="footer" style="margin-top: 0px">
+  <p>&copy; 2024 Málaga Website</p>
+</footer>
+</body>
+</html>

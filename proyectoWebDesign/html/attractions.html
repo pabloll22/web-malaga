@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Málaga Website</title>
+    <link rel="stylesheet" href="./../css/style.css" />
+  </head>
+
+  <body>
+    <header class="sub-header">
+      <nav>
+        <ul class="menu">
+          <li><a href="./../index.html"> HOME</a></li>
+          <li class="menuTypes">
+            NEWS & EVENTS
+            <ul class="sub-menu">
+              <li><a href="news.html">News</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            HISTORY
+            <ul class="sub-menu">
+              <li><a href="CityHistory.html">City History</a></li>
+              <li><a href="FamousPeople.html">Famous People</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            SIGHTSEEING
+            <ul class="sub-menu">
+              <li><a href="buildingsAndNature.html">Buildings and Nature</a></li>
+              <li><a href="attractions.html">Attractions</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes">
+            SERVICES
+            <ul class="sub-menu">
+              <li><a href="acommodation.html">Accommodation</a></li>
+              <li><a href="restaurants.html">Restaurants</a></li>
+            </ul>
+          </li>
+          <li class="menuTypes"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section>
+      <h1 class="introTitle">Attractions</h1>
+      <p class="introText">
+        Check out must-see sights and activities:
+        Alcazaba, Museo del Automóvil y la Moda de Málaga, Walking Tours, Historic Sites.
+      </p>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="container-gallery">
+          <h1>City Tours</h1>
+          <button class="arrow left" onclick="scrollGallery(-1, 'gallery1')">&#8592;</button>
+          <div class="photos" id="gallery1">
+            <div class="card">
+              <img src="./../img/alcazaba.jpg" alt="Alcazaba" />
+              <h3>Full Day to Alcazaba Palace and Gardens</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/tour2.jpg" alt="ronda" />
+              <h3>Trip to ronda and Setenil de las Bodegas</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/teatroRomano.webp" alt="teatroRomano" />
+              <h3>Teatro Romano guided tour</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/autobusTuristico.webp" alt="autobusTuristico" />
+              <h3>City Sightseeing Malaga Hop-On Hop-Off Bus Tour</h3>
+            </div>
+          </div>
+          <button class="arrow right" onclick="scrollGallery(1, 'gallery1')">&#8594;</button>
+        </div>
+
+        <div class="container-gallery">
+          <h1>Museums</h1>
+          <button class="arrow left" onclick="scrollGallery(-1, 'gallery2')">&#8592;</button>
+          <div class="photos" id="gallery2">
+            <div class="card">
+              <img src="./../img/museoPicasso.jpg" alt="Picasso Museum" />
+              <h3>Picasso Museum</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/museoThyssen.webp" alt="ThyssenMuseum" />
+              <h3>Thyssen Museum</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/museoAuto.jpg" alt="AutoMuseum" />
+              <h3>Automovilistic and fashion Musseum</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/museoPompidou.jpg" alt="PompidouMuseum" />
+              <h3>Pompidou Museum</h3>
+            </div>
+          </div>
+          <button class="arrow right" onclick="scrollGallery(1, 'gallery2')">&#8594;</button>
+        </div>
+
+        <div class="container-gallery">
+          <h1>Activities</h1>
+          <button class="arrow left" onclick="scrollGallery(-1, 'gallery3')">&#8592;</button>
+          <div class="photos" id="gallery3">
+            <div class="card">
+              <img src="./../img/Caminitodelrey.jpg" alt="Caminitodelrey" />
+              <h3>Guided tour to Caminito del rey</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/catamaran.jpg" alt="catamaran" />
+              <h3>Catamaran ride</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/flamenco.jpg" alt="flamenco" />
+              <h3>Flamenco show</h3>
+            </div>
+            <div class="card">
+              <img src="./../img/cuevasNerja.jpg" alt="cuevasNerja" />
+              <h3>Tour of Nerja Caves</h3>
+            </div>
+          </div>
+          <button class="arrow right" onclick="scrollGallery(1, 'gallery3')">&#8594;</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <script>
+      function scrollGallery(direction, galleryId) {
+        const photos = document.getElementById(galleryId);
+        const cardWidth = photos.querySelector('.card').clientWidth;
+        photos.scrollBy({
+          left: direction * cardWidth,
+          behavior: 'smooth'
+        });
+      }
+    </script>
+
+<footer class="footer" style="margin-top: 0px">
+  <p>&copy; 2024 Málaga Website</p>
+</footer>
+</body>
+</html>
